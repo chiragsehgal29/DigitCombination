@@ -18,7 +18,9 @@ h2 {
 
 .input-container {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap; /* Wrap items to next line if necessary */
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Distribute items evenly */
   margin-bottom: 20px;
 }
 
@@ -26,6 +28,7 @@ h2 {
   padding: 10px;
   flex: 1;
   margin-right: 10px;
+  margin-bottom: 10px; /* Add space between input and button */
 }
 
 .input-container span {
@@ -50,24 +53,28 @@ h2 {
   font-size: 18px;
 }
 
-#copyButton {
+#copyButton, #removeSameDigitButton {
   padding: 10px 20px;
   background-color: #007bff;
   color: white;
   border: none;
   cursor: pointer;
   display: block;
-  margin: 30 auto;
+  width: 100%; /* Take up full width */
+  margin-bottom: 30px; /* Add space between buttons */
 }
 
-#removeSameDigitButton{
- background-color: red;
- color: white;
- border: none;
- padding: 10px;
- margin: 100px;
- cursor: pointer;
- display: block;
- margin: 0 auto;
+#removeSameDigitButton {
+  background-color: red;
+}
 
+@media only screen and (max-width: 600px) {
+  .input-container {
+    flex-direction: column; /* Stack items vertically */
+    align-items: stretch; /* Stretch items to full width */
+  }
+
+  .input-container input[type="text"] {
+    margin-right: 0; /* Remove right margin for input on mobile */
+  }
 }
