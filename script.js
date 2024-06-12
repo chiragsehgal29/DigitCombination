@@ -18,6 +18,7 @@ function combineDigits() {
     }
   }
 
+  
   function copyOutput() {
     var outputText = document.getElementById("output").innerText.trim();
     var textarea = document.createElement("textarea");
@@ -29,3 +30,9 @@ function combineDigits() {
     alert("Output copied to clipboard!");
   }
   
+
+  function removeSameDigitNumbers() {
+    var output = document.getElementById("output").innerHTML;
+    var uniqueOutput = output.replace(/\b(\d)(?=\d*\1\b|\b)\d*\b,?/g, "").trim();
+    document.getElementById("output").innerHTML = uniqueOutput;
+  }
