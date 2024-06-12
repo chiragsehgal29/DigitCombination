@@ -15,8 +15,15 @@
       <input type="text" id="rightDigits" placeholder="Enter right digits">
       <button onclick="combineDigits()">Combine</button>
     </div>
-    <div id="output"></div>
-    <button id="copyButton" onclick="copyOutput()">Copy Output</button>
+    <div class="output-container">
+      <div id="output"></div>
+      <button id="copyButton" onclick="copyOutput()">Copy Original Output</button>
+    </div>
+    <button id="removeSameDigitButton" onclick="removeSameDigitNumbers()">Remove Same Digit Numbers</button>
+    <!-- <div class="output-container">
+      <div id="uniqueOutput"></div>
+      <button id="copyUniqueButton" onclick="copyUniqueOutput()">Copy Unique Output</button>
+    </div> -->
   </div>
   <script src="script.js"></script>
 </body>
